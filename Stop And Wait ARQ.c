@@ -16,34 +16,13 @@ int StopAndWait(int frames)
     return 0;
 
 }
-int GoBackN(int frames){
-    int ack,sent=0;
-    while(1){
-        while(1){
-            printf("Frames %d has been transmitted\n",++sent);
-            if(sent==frames)
-                break;
 
-        }
-        printf("Enter the last acknowledgement received\n");
-        scanf("%d",&ack);
-        if(ack>=frames)
-           {
-               printf("All frames transmitted\n");
-               break;
-           }
-        else
-            sent=ack;
-
-    }
-    return 0;
-}
 int main()
 {
     int frames;
     printf("Enter the no. of frames to be sent\n");
     scanf("%d",&frames);
     StopAndWait(frames);
-    GoBackN(frames);
+    
     return 0;
 }
